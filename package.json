@@ -1,21 +1,15 @@
 {
+	"author": "Eugene Shikabli",
   "name": "express",
-  "version": "1.0.0",
-  "description": "[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-npm)](https://repl.it/github/freeCodeCamp/boilerplate-npm)",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shikabli/Express.git"
-  },
-  "keywords": [],
-  "author": "Eugene Shikabli",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shikabli/Express/issues"
-  },
-  "homepage": "https://github.com/Shikabli/Express#readme"
+	"dependencies": {
+		"express": "^4.14.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Shikabli/Express.git"
+	}
 }
