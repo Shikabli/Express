@@ -8,7 +8,7 @@
   var fs = require('fs');
   var express = require('express');
   var app = express();
-  const port = 3000;
+  //const port = 3000;
   
   if (!process.env.DISABLE_XORIGIN) {
     app.use(function(req, res, next) {
@@ -55,8 +55,8 @@
     }  
   })
   
-  app.listen(port, function () {
-    console.log(`Node.js listening ...${port}`);
+  app.listen(process.env.PORT, function () {
+    console.log('Node.js listening ...');
   });
   
   
