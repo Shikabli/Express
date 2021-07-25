@@ -25,20 +25,20 @@
   app.use('/public', express.static(process.cwd() + '/public'));
   
   
-  app.route('/_api/package.json')
+  app.route('/')
     .get(function(req, res, next) {
       console.log('requested');
       fs.readFile(__dirname + '/package.json','utf8',function(err, data) {
         if(err) return next(err);
-        res.type('txt').send(JSON.stringify(data.toString));
+        res.type('txt').send(data.toString);
       });
     });
     
-  app.route('/')
+  /*app.route('/')
       .get(function(req, res) {
             res.sendFile(process.cwd() + '/views/index.html');
       })
-  
+  */
   // Respond not found to all the wrong routes
   app.use(function(req, res, next){
     res.status(404);
