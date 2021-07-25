@@ -7,7 +7,6 @@
 
   var fs = require('fs');
   var express = require('express');
-const { json } = require('body-parser');
   var app = express();
   
   if (!process.env.DISABLE_XORIGIN) {
@@ -30,9 +29,8 @@ const { json } = require('body-parser');
     .get(function(req, res, next) {
       console.log('requested');
       fs.readFile(__dirname + '/package.json', function(err, data) {
-        var json = JSON.parse(data.toString)
         if(err) return next(err);
-        res.send(json);
+        res.type('txt').send(data.toString());
       });
     });
     
