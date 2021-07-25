@@ -31,7 +31,7 @@
       console.log('requested');
       fs.readFile(__dirname + '/package.json','utf8',function(err, data) {
         if(err) return next(err);
-        res.type('txt').send(JSON.parse(JSON.stringify(data)));
+        res.type('txt').send(JSON.parse(data));
       });
     });
     
@@ -54,7 +54,7 @@
         .send(err.message || 'SERVER ERROR');
     }  
   })
-  
+  //process.env.PORT
   app.listen(process.env.PORT, function () {
     console.log('Node.js listening ...');
   });
