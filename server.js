@@ -30,9 +30,9 @@ const { json } = require('body-parser');
     .get(function(req, res, next) {
       console.log('requested');
       fs.readFile(__dirname + '/package.json', function(err, data) {
-        var json = JSON.parse(data.toString)
+        var json = JSON.parse(data)
         if(err) return next(err);
-        res.type('application/json').send(json);
+        res.send(json);
       });
     });
     
