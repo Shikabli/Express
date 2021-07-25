@@ -25,7 +25,7 @@
   app.use('/public', express.static(process.cwd() + '/public'));
   
   
-  app.route('/package.json')
+  app.route('/_api/package.json')
     .get(function(req, res, next) {
       console.log('requested');
       fs.readFile(__dirname + '/package.json', function(err, data) {
