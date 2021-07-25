@@ -30,7 +30,7 @@
       console.log('requested');
       fs.readFile(__dirname + '/package.json', function(err, data) {
         if(err) return next(err);
-        res.type('txt').send(data.toString());
+        res.type('txt').send(JSON.stringify(data));
       });
     });
     
